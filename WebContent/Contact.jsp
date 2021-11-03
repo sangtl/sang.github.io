@@ -37,6 +37,7 @@
 </div>
 <div class="container">
     <div class="row">
+       <c:if test="${mes !=null}">
         <div class="col-12 col-sm-4">
             <div class="card bg-light mb-3">
          <div class="card-header bg-success text-white text-uppercase"><i class="fa fa-envelope"></i> 
@@ -44,6 +45,7 @@
   </div>
         </div>
         </div>
+        </c:if>
         </div>
         </div>
 

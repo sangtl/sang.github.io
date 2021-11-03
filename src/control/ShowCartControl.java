@@ -63,6 +63,9 @@ public class ShowCartControl extends HttpServlet {
             total = total + o.getAmount() * o.getPrice();
             amout = amout + o.getAmount();
         }
+        HttpSession session = request.getSession();
+        session.setAttribute("a", amout);
+       
         request.setAttribute("list", list);
         request.setAttribute("amout", amout);
         request.setAttribute("total", total);

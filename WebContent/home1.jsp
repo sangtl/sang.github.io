@@ -37,7 +37,7 @@
     <body>
        <jsp:include page="Menu.jsp"></jsp:include>
        
-       <jsp:include page="slide.jsp"></jsp:include>
+   
        <hr></hr>
        
   
@@ -80,7 +80,7 @@
                                         <p class="card-text show_txt">${o.title}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-danger btn-block">${o.price} vnđ</p>
+                                                <p class="btn btn-info  btn-block">${o.price} vnđ</p>
                                             </div>
                                             <div class="col">
                                                 <a href="cart?id=${o.id }" class="btn btn-success btn-block">Add to cart</a>

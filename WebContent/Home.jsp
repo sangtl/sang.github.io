@@ -13,34 +13,96 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         
+       
+
+        
       
          
          
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" href="slider/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="slider/css/owl.theme.default.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
-		<link rel="stylesheet" href="slider/css/style.css">
-          
+		
     
     </head>
     
-    <style>
+<style>
 			    
-			    a.page-link.active{
-				display:block;
-			    background-color:#007bff;
-			    color:#FFFFFF;
-			}
-    </style>
-    <body>
+a.page-link.active{
+display:block;
+background-color:#007bff;
+color:#FFFFFF;
+}
+			    
+
+			
+</style>
+<style>
+
+a:hover,
+a:focus 
+{
+	text-decoration: none;
+
+	color: #007bff;
+}
+</style>
+<body>
        <jsp:include page="Menu.jsp"></jsp:include>
+        <section class="hero">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-12">
+                <div class="hero__item set-bg" data-setbg="slider/images/sl1.jpg">
+                        <div class="hero__text">
+                            <span>Trending</span>
+                            <h2>Adidas <br />2021 SuperStar</h2>
+                            <p>Free Pickup and Delivery Available</p>
+                            <a href="#" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </section>
        
-       <jsp:include page="slide.jsp"></jsp:include>
+      
        <hr></hr>
+       <section class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="images/stan.jpg">
+                            <h5><a href="#">StanSmith</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="images/van1.jpg">
+                            <h5><a href="#">Vans</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="images/ultra.jpg">
+                            <h5><a href="#">Adidas</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="images/van6.jpg">
+                            <h5><a href="#">Vans</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="images/anh1.jpg">
+                            <h5><a href="#">Adidas</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
        
-  
+  <hr></hr>
         <!--end of menu-->
         <div class="container ">
         
@@ -57,6 +119,10 @@
                 </div>
             </div>
         </div>
+        
+        
+        
+        
         <div class="container ">
         
         
@@ -80,7 +146,7 @@
                                         <p class="card-text show_txt">${o.title}</p>
                                         <div class="row">
                                             <div class="col">
-                                                <p class="btn btn-danger btn-block">${o.price} vnđ</p>
+                                                <p class="btn btn-info btn-block">${o.price} vnđ</p>
                                             </div>
                                             <div class="col">
                                                 <a href="cart?id=${o.id }" class="btn btn-success btn-block">Add to cart</a>
@@ -90,6 +156,11 @@
                                 </div>
                             </div>
                         </c:forEach>
+                        
+                     
+                     
+                     
+                        
                         
                  <div class="clearfix">
                     
@@ -109,6 +180,9 @@
                         
                     </div>
                     
+                    
+                    
+                    
                     <div class="space">
                          <p></p>
                     </div>
@@ -123,13 +197,24 @@
         <!-- Footer -->
        <jsp:include page="Footer.jsp"></jsp:include>
        
+       
+       
+       
         
         
         
-
+<script src="header/js/jquery-3.3.1.min.js"></script>
+    <script src="header/js/bootstrap.min.js"></script>
+    <script src="header/js/jquery.nice-select.min.js"></script>
+    <script src="header/js/jquery-ui.min.js"></script>
+    <script src="header/js/jquery.slicknav.js"></script>
+    <script src="header/js/mixitup.min.js"></script>
+    <script src="header/js/owl.carousel.min.js"></script>
+    <script src="header/js/main.js"></script>
     
         
         
     </body>
+    
 </html>
 

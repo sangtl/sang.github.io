@@ -59,15 +59,17 @@ public class LoginControl extends HttpServlet {
     	
     	
         Cookie arr[] = request.getCookies();
+        if(arr!=null) {
         
-        for(Cookie o : arr) {
-        	if(o.getName().equals("userC")) {
-        		request.setAttribute("username", o.getValue());
-        	}
-        	
-        	if(o.getName().equals("passC")) {
-        		request.setAttribute("password", o.getValue());
-        	}
+		        for(Cookie o : arr) {
+		        	if(o.getName().equals("userC")) {
+		        		request.setAttribute("username", o.getValue());
+		        	}
+		        	
+		        	if(o.getName().equals("passC")) {
+		        		request.setAttribute("password", o.getValue());
+		        	}
+		        }
         }
         
         request.getRequestDispatcher("Login.jsp").forward(request, response);
@@ -100,8 +102,8 @@ public class LoginControl extends HttpServlet {
               Cookie u = new Cookie("userC", username);
               Cookie p = new Cookie("passC", password);
               u.setMaxAge(60);
-              if( remember!=null) {
-            	  p.setMaxAge(60);
+              if(remember != null) {
+            	  p.setMaxAge(30*60);
               }
               else {
               p.setMaxAge(0);

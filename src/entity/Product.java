@@ -34,7 +34,16 @@ public class Product {
    
     
 
-    public int getId() {
+
+	public Product(String name, String image, double price, String title) {
+		super();
+		this.name = name;
+		this.image = image;
+		this.price = price;
+		this.title = title;
+	}
+
+	public int getId() {
         return id;
     }
 

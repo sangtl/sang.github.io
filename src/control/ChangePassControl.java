@@ -43,21 +43,24 @@ public class ChangePassControl extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String pass = request.getParameter("newpass");
         String currentpass = request.getParameter("curpass");
+        String verpass = request.getParameter("verpass");
+        
         
         HttpSession session = request.getSession();
         Account a = (Account) session.getAttribute("acc");
         int uid = a.getUid();
         String cpass = a.getPass();
-        if(cpass.equals(currentpass) ) {
+        if((cpass.equals(currentpass)) && (pass.equals(verpass)) ) {
         
         
         
 	        DAO dao = new DAO();
 	        dao.editPassWord(pass, uid);
-	        response.sendRedirect("ChangePass.jsp");
+	        request.setAttribute("messuccess", "Success !");
+	        request.getRequestDispatcher("ChangePass.jsp").forward(request, response);
         }
         else {
-        	 request.setAttribute("meswrong", "Wrong current password !");
+        	 request.setAttribute("meswrong", "Wrong current password or verify password !");
         	 request.getRequestDispatcher("ChangePass.jsp").forward(request, response);
         }
        

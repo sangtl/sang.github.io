@@ -9,6 +9,8 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+        
 </head>
 <body>
  <jsp:include page="Menu.jsp"></jsp:include>
@@ -21,8 +23,21 @@
                     <!-- form card change password -->
                     
                     <div class="card card-outline-secondary">
+                    
+                    <c:if test="${messuccess != null }" >
+                    	<div class="alert alert-success" role="alert">
+						 SUCCESS !
+						</div>
+					</c:if>
+					
+					<c:if test="${meswrong != null }" >
+                    	<div class="alert alert-danger" role="alert">
+						 Wrong current password or verify !
+						</div>
+					</c:if>
+					
                         <div class="card-header">
-                            <h3 class="mb-0">Change Password <p class="text-danger">${meswrong}</p></h3>
+                            <h3 class="mb-0">Change Password </h3>
                         </div>
                         <div class="card-body">
                             <form action="changepass" method="post" autocomplete="off">
